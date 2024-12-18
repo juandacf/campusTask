@@ -1,4 +1,6 @@
+import os
 def signUp (mainDict):
+    os.system("clear")
     userName =  input("Por favor, ingrese su nombre de usuario") 
     password = input("por favor, ingrese su contraseña")
     userID = len(mainDict) +1
@@ -27,6 +29,7 @@ def signUp (mainDict):
 
 
 def logIn(mainDict):
+    os.system("clear")
     userName= input("Por favor, ingrese su nombre de usuario para loggearse: ")
     passWord= input("Por favor, ingrese su contraseña: ")
     userID = ''
@@ -39,7 +42,7 @@ def logIn(mainDict):
                         if(passWord== mainDict.get(userID).get('passWord')):
                             return userID
                         else:
-                            return  input("No se pudo verificar la identidad del usuario. Por favor, oprima enter e inténtelo de nuevo.")
+                            return False
     
     
     
