@@ -2,6 +2,7 @@ import login as log
 import jsonModule as j
 import os
 
+
 def loginMenu(mainDict):
     os.system("clear")
     optionChosen = int(input("""Bienvenido al sistema de gestión Campustasks. Por favor, escoja alguna de las siguientes opciones:
@@ -23,6 +24,7 @@ def loginMenu(mainDict):
                 featureMenu(mainDict, loginReturn)
             else:
                 input("El usuario no pudo ser validado. Será devuelto al menú principal. Presione enter para volver al menú principal.")
+                loginMenu(mainDict)
         case 3:
             os.system('clear')
 
@@ -46,9 +48,9 @@ def featureMenu(mainDict, userID): #Completar con un match case las opcionesd el
         case 1:
             boardMenu(mainDict,userID)
         case 2: 
-            pass
+            listMenu(mainDict, userID)
         case 3:
-            pass
+            cardMenu(mainDict, userID)
         case 4:
             loginMenu(mainDict)
         case _:
@@ -80,7 +82,57 @@ def boardMenu(mainDict,userID):
         case _:
             input("el contenido digitado no coincide con ninguna opción del sistema. Oprima enter para ver el menú de nuevo.")
             boardMenu(mainDict, userID)
-        
+
+def listMenu(mainDict, userID):
+    os.system("clear")
+    optionChosen = int(input("""
+        Por favor, escoja la opción de gestión para su lista:
+        1.Crear una lista dentro de un tablero.
+        2.Ver todas las listas de un tablero.
+        3.Actualizar el nombre de una lista.
+        4.Eliminar una lista.
+        5. Volver al menú anterior.
+    """))
+    
+    match optionChosen:
+        case 1:
+            pass
+        case 2:
+            pass
+        case 3:
+            pass
+        case 4:
+            pass
+        case 5:
+            featureMenu(mainDict,userID)
+        case _:
+            input("el contenido digitado no coincide con ninguna opción del sistema. Oprima enter para ver el menú de nuevo.")
+            listMenu(mainDict, userID)
+
+def cardMenu(mainDict, userID):
+    os.system("clear")
+    optionChosen = int(input("""
+        Por favor, escoja la opción de gestión para su tarjeta:
+        1.Crear una tarjeta dentro de una lista.
+        2.Ver todas las tarjetas dentro de una lista.
+        3.Actualizar  una tarjeta (Título, descripción, estado)
+        4. Eliminar una tarjeta.
+        5. Volver al menú anterior.
+    """))
+    match optionChosen: 
+        case 1:
+            pass
+        case 2:
+            pass
+        case 3:
+            pass
+        case 4:
+            pass
+        case 5:
+            featureMenu(mainDict, userID)
+        case _:
+            input("el contenido digitado no coincide con ninguna opción del sistema. Oprima enter para ver el menú de nuevo.")
+            cardMenu(mainDict, userID)            
 
 
 
