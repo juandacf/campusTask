@@ -11,13 +11,14 @@ def signUp (mainDict):
                         permissionSwitch=False
 
 
-    if(permissionSwitch==True):
+    if(permissionSwitch==True): # Constructor para la creación de usuarios junto a sus tableros
         mainDict.update({
             str(userID): {
                 'userName':userName,
                 'passWord':password,
                 'boards': {}
             }})
+        input("El usuario ha sido creado con éxito.")
     else:
         input("No se pudo crear su cuenta. Ya existe otro usuario con ese nombre")
 
@@ -26,4 +27,20 @@ def signUp (mainDict):
 
 
 def logIn(mainDict):
-    userName= input("Por favor, ingrese su nombre de usuario para loggearse ")
+    userName= input("Por favor, ingrese su nombre de usuario para loggearse: ")
+    passWord= input("Por favor, ingrese su contraseña: ")
+    userID = ''
+    if (len(mainDict)>0):  #Localizar el diccionario del usuario dentro del diccionario principal
+        for k,v in mainDict.items():
+            for l,b in v.items():
+                if(l=='userName'):
+                    if(b==userName):
+                        userID = k
+                        if(passWord== mainDict.get(userID).get('passWord')):
+                            return userID
+                        else:
+                            return  input("No se pudo verificar la identidad del usuario. Por favor, oprima enter e inténtelo de nuevo.")
+    
+    
+    
+                        
