@@ -1,7 +1,7 @@
 import login as log
 import jsonModule as j
 import os
-
+import boards as b
 
 def loginMenu(mainDict):
     os.system("clear")
@@ -70,7 +70,9 @@ def boardMenu(mainDict,userID):
 
     match optionChosen:
         case 1:
-            pass
+            b.addBoard(mainDict,userID)
+            j.addData(mainDict)
+            boardMenu(mainDict,userID)
         case 2:
             pass
         case 3:

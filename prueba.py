@@ -9,7 +9,3 @@ data = {
     }
 }
 
-for k,v in data.items():
-    for l,b in v.items():
-        if(l=='nombre'):
-            print(b)

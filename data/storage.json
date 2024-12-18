@@ -2,7 +2,11 @@
     "1": {
         "userName": "juandacf",
         "passWord": "juandita0425",
-        "boards": {}
+        "boards": {
+            "perlita": {},
+            "hola": {},
+            "ejemplo": {}
+        }
     },
     "2": {
         "userName": "chrismcruiz",
