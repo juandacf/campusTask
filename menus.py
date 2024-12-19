@@ -75,11 +75,16 @@ def boardMenu(mainDict,userID):
             boardMenu(mainDict,userID)
         case 2:
             b.viewBoards(mainDict,userID)
+            input("Presione enter para volver al menú de tableros.")
             boardMenu(mainDict, userID)
         case 3:
-            pass
+            b.updateBoardName(mainDict,userID)
+            j.addData(mainDict)
+            boardMenu(mainDict,userID)
         case 4:
-            pass
+            b.deleteBoard(mainDict,userID)
+            j.addData(mainDict)
+            boardMenu(mainDict,userID)
         case 5:
             featureMenu(mainDict,userID)
         case _:

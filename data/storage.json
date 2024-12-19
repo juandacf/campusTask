@@ -3,9 +3,10 @@
         "userName": "juandacf",
         "passWord": "juandita0425",
         "boards": {
-            "perlita": {},
-            "hola": {},
-            "ejemplo": {}
+            "ejemplo": {},
+            "chaito": {
+                "holas": "holitass"
+            }
         }
     },
     "2": {
