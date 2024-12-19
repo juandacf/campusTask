@@ -3,9 +3,11 @@
         "userName": "juandacf",
         "passWord": "juandita0425",
         "boards": {
-            "ejemplo": {},
+            "ejemplo": {
+                "ejemplito": {}
+            },
             "chaito": {
-                "holas": "holitass"
+                "holiwi": {}
             }
         }
     },

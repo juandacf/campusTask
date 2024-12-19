@@ -24,10 +24,6 @@ def signUp (mainDict):
     else:
         input("No se pudo crear su cuenta. Ya existe otro usuario con ese nombre")
 
-    
-    
-
-
 def logIn(mainDict):
     os.system("clear")
     userName= input("Por favor, ingrese su nombre de usuario para loggearse: ")
