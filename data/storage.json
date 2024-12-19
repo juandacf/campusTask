@@ -12,5 +12,13 @@
         "userName": "chrismcruiz",
         "passWord": "marzo1998",
         "boards": {}
+    },
+    "3": {
+        "userName": "rickakm",
+        "passWord": "yessica123",
+        "boards": {
+            "natik": {},
+            "padrastro": {}
+        }
     }
 }

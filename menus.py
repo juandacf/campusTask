@@ -74,7 +74,8 @@ def boardMenu(mainDict,userID):
             j.addData(mainDict)
             boardMenu(mainDict,userID)
         case 2:
-            pass
+            b.viewBoards(mainDict,userID)
+            boardMenu(mainDict, userID)
         case 3:
             pass
         case 4:
