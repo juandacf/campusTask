@@ -109,7 +109,7 @@ def listMenu(mainDict, userID):
             j.addData(mainDict)
             listMenu(mainDict,userID)
         case 2:
-            pass
+            l.viewList(mainDict,userID)
         case 3:
             pass
         case 4:
