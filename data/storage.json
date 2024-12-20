@@ -4,8 +4,9 @@
         "passWord": "1",
         "boards": {
             "ejemplo": {
-                "ejemplito": {},
-                "porta": {}
+                "whatsapp": {
+                    "noperope": "efwefwef"
+                }
             },
             "hoalssss": {}
         }

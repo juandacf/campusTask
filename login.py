@@ -1,8 +1,8 @@
 import os
 def signUp (mainDict):
     os.system("clear")
-    userName =  input("Por favor, ingrese su nombre de usuario") 
-    password = input("por favor, ingrese su contraseña")
+    userName =  input("Por favor, ingrese su nombre de usuario: ") 
+    password = input("por favor, ingrese su contraseña: ")
     userID = len(mainDict) +1
     permissionSwitch = True
     if(len(mainDict)>0):     #Validación para que dos personas no puedan tener el mismo nombre de usuario

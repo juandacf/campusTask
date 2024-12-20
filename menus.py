@@ -110,10 +110,16 @@ def listMenu(mainDict, userID):
             listMenu(mainDict,userID)
         case 2:
             l.viewList(mainDict,userID)
+            input('presione enter para volver al menú principal.')
+            listMenu(mainDict, userID)
         case 3:
-            pass
+            l.updateListName(mainDict, userID)
+            j.addData(mainDict)
+            listMenu(mainDict,userID)
         case 4:
-            pass
+            l.deleteList(mainDict, userID)
+            j.addData(mainDict)
+            listMenu(mainDict,userID)
         case 5:
             featureMenu(mainDict,userID)
         case _:

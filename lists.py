@@ -20,6 +20,25 @@ def viewList (mainDict, userID):
                     for q,w in y.items():
                         if(q==boardName):
                             contador=1
+                            print('Las listas disponibles son:')
                             for e,r in w.items():
-                                print(e)
+                                print(f'{contador}.{e}')
                                 contador+=1
+                            return boardName
+                            
+
+def updateListName(mainDict, userID):
+    boardChosen=viewList(mainDict, userID)
+    listChosen=str(input("Ingrese el nombre de la lista cuyo nombre desea cambiar: "))
+    newname=str(input("ingrese el nuevo nombre para la lista: "))
+    backup= mainDict.get(userID).get('boards').get(boardChosen).get(listChosen)
+    del mainDict[userID]['boards'][boardChosen][listChosen]
+    mainDict.get(userID).get('boards').get(boardChosen).update({newname:backup})
+    input("El nombre de la lista ha sido actualizado con éxito. Oprima enter para volver al menú de listas.")
+
+
+def deleteList(mainDict,userID):
+    boardChosen=viewList(mainDict, userID)
+    listChosen=str(input("Ingrese el nombre de la lista cuyo nombre desea eliminar: "))
+    del mainDict[userID]['boards'][boardChosen][listChosen]
+    input("Su lista ha sido eliminada con éxito. ")
