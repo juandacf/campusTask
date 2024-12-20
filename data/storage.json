@@ -5,7 +5,17 @@
         "boards": {
             "ejemplo": {
                 "whatsapp": {
-                    "noperope": "efwefwef"
+                    "noperope": "efwefwef",
+                    "contacto": {
+                        "titulo": "mouse",
+                        "descripcion": "teclado",
+                        "estado": "activo"
+                    },
+                    "tarjeta": {
+                        "titulo": "titulo",
+                        "descripcion": "descripcion",
+                        "estado": "activo"
+                    }
                 }
             },
             "hoalssss": {}

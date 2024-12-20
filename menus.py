@@ -3,6 +3,7 @@ import jsonModule as j
 import os
 import boards as b
 import lists as l
+import cards as c
 
 def loginMenu(mainDict):
     os.system("clear")
@@ -111,7 +112,7 @@ def listMenu(mainDict, userID):
         case 2:
             l.viewList(mainDict,userID)
             input('presione enter para volver al menú principal.')
-            listMenu(mainDict, userID)
+            listMenu(maiestadonDict, userID)
         case 3:
             l.updateListName(mainDict, userID)
             j.addData(mainDict)
@@ -138,7 +139,9 @@ def cardMenu(mainDict, userID):
     """))
     match optionChosen: 
         case 1:
-            pass
+            c.addCard(mainDict, userID)
+            j.addData(mainDict)
+            cardMenu(mainDict, userID)
         case 2:
             pass
         case 3:
